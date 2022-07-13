@@ -15,6 +15,7 @@
 		058A29C9287E870000BB5C60 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 058A29C7287E870000BB5C60 /* data.json */; };
 		058A29CA287E870000BB5C60 /* style.html in Resources */ = {isa = PBXBuildFile; fileRef = 058A29C8287E870000BB5C60 /* style.html */; };
 		058A29CC287EBEF800BB5C60 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29CB287EBEF800BB5C60 /* Models.swift */; };
+		058A29CE287EEC1A00BB5C60 /* HomeViewLearingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29CD287EEC1A00BB5C60 /* HomeViewLearingCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		058A29C7287E870000BB5C60 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = "../../../../../../Downloads/iOS Foundations 2021/Module 5/Lesson 03/M5L3 Resources/data/data.json"; sourceTree = "<group>"; };
 		058A29C8287E870000BB5C60 /* style.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = style.html; path = "../../../../../../Downloads/iOS Foundations 2021/Module 5/Lesson 03/M5L3 Resources/data/style.html"; sourceTree = "<group>"; };
 		058A29CB287EBEF800BB5C60 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		058A29CD287EEC1A00BB5C60 /* HomeViewLearingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLearingCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				058A29B4287DCB3A00BB5C60 /* HomeView.swift */,
+				058A29CD287EEC1A00BB5C60 /* HomeViewLearingCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				058A29B5287DCB3A00BB5C60 /* HomeView.swift in Sources */,
+				058A29CE287EEC1A00BB5C60 /* HomeViewLearingCard.swift in Sources */,
 				058A29B3287DCB3A00BB5C60 /* LearningApp.swift in Sources */,
 				058A29C6287DCE7B00BB5C60 /* ContentModel.swift in Sources */,
 				058A29CC287EBEF800BB5C60 /* Models.swift in Sources */,
