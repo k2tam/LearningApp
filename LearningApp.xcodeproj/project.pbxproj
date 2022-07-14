@@ -18,6 +18,9 @@
 		058A29CE287EEC1A00BB5C60 /* HomeViewLearingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29CD287EEC1A00BB5C60 /* HomeViewLearingCard.swift */; };
 		058A29D0287F1AA600BB5C60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29CF287F1AA600BB5C60 /* ContentView.swift */; };
 		05BC0737287F2BDB001C3C00 /* ContentViewLessonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC0736287F2BDB001C3C00 /* ContentViewLessonCard.swift */; };
+		05BC0739287FBE9F001C3C00 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC0738287FBE9F001C3C00 /* ContentDetailView.swift */; };
+		05BC073C287FC155001C3C00 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BC073B287FC155001C3C00 /* AVKit.framework */; };
+		05BC073E287FC3B0001C3C00 /* Constains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC073D287FC3B0001C3C00 /* Constains.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		058A29CD287EEC1A00BB5C60 /* HomeViewLearingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLearingCard.swift; sourceTree = "<group>"; };
 		058A29CF287F1AA600BB5C60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05BC0736287F2BDB001C3C00 /* ContentViewLessonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewLessonCard.swift; sourceTree = "<group>"; };
+		05BC0738287FBE9F001C3C00 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
+		05BC073B287FC155001C3C00 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		05BC073D287FC3B0001C3C00 /* Constains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constains.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BC073C287FC155001C3C00 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +58,7 @@
 			children = (
 				058A29B1287DCB3A00BB5C60 /* LearningApp */,
 				058A29B0287DCB3A00BB5C60 /* Products */,
+				05BC073A287FC155001C3C00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +100,7 @@
 				058A29CD287EEC1A00BB5C60 /* HomeViewLearingCard.swift */,
 				058A29CF287F1AA600BB5C60 /* ContentView.swift */,
 				05BC0736287F2BDB001C3C00 /* ContentViewLessonCard.swift */,
+				05BC0738287FBE9F001C3C00 /* ContentDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,8 +133,17 @@
 			children = (
 				058A29C7287E870000BB5C60 /* data.json */,
 				058A29C8287E870000BB5C60 /* style.html */,
+				05BC073D287FC3B0001C3C00 /* Constains.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		05BC073A287FC155001C3C00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05BC073B287FC155001C3C00 /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +221,10 @@
 				058A29B5287DCB3A00BB5C60 /* HomeView.swift in Sources */,
 				058A29CE287EEC1A00BB5C60 /* HomeViewLearingCard.swift in Sources */,
 				058A29D0287F1AA600BB5C60 /* ContentView.swift in Sources */,
+				05BC0739287FBE9F001C3C00 /* ContentDetailView.swift in Sources */,
 				05BC0737287F2BDB001C3C00 /* ContentViewLessonCard.swift in Sources */,
 				058A29B3287DCB3A00BB5C60 /* LearningApp.swift in Sources */,
+				05BC073E287FC3B0001C3C00 /* Constains.swift in Sources */,
 				058A29C6287DCE7B00BB5C60 /* ContentModel.swift in Sources */,
 				058A29CC287EBEF800BB5C60 /* Models.swift in Sources */,
 			);
