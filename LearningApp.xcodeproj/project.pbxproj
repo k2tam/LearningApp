@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053CA4D12881D75C002AAB4F /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CA4D02881D75C002AAB4F /* RectangleView.swift */; };
+		053CA4EF2882DC0E002AAB4F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CA4EE2882DC0E002AAB4F /* TestView.swift */; };
 		058A29B3287DCB3A00BB5C60 /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29B2287DCB3A00BB5C60 /* LearningApp.swift */; };
 		058A29B5287DCB3A00BB5C60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29B4287DCB3A00BB5C60 /* HomeView.swift */; };
 		058A29B7287DCB3B00BB5C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058A29B6287DCB3B00BB5C60 /* Assets.xcassets */; };
@@ -21,9 +23,12 @@
 		05BC0739287FBE9F001C3C00 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC0738287FBE9F001C3C00 /* ContentDetailView.swift */; };
 		05BC073C287FC155001C3C00 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BC073B287FC155001C3C00 /* AVKit.framework */; };
 		05BC073E287FC3B0001C3C00 /* Constains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC073D287FC3B0001C3C00 /* Constains.swift */; };
+		05BC075D28816ED4001C3C00 /* CodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC075C28816ED4001C3C00 /* CodeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053CA4D02881D75C002AAB4F /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
+		053CA4EE2882DC0E002AAB4F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		058A29AF287DCB3A00BB5C60 /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058A29B2287DCB3A00BB5C60 /* LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningApp.swift; sourceTree = "<group>"; };
 		058A29B4287DCB3A00BB5C60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		05BC0738287FBE9F001C3C00 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 		05BC073B287FC155001C3C00 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		05BC073D287FC3B0001C3C00 /* Constains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constains.swift; sourceTree = "<group>"; };
+		05BC075C28816ED4001C3C00 /* CodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 				058A29CF287F1AA600BB5C60 /* ContentView.swift */,
 				05BC0736287F2BDB001C3C00 /* ContentViewLessonCard.swift */,
 				05BC0738287FBE9F001C3C00 /* ContentDetailView.swift */,
+				05BC075C28816ED4001C3C00 /* CodeTextView.swift */,
+				053CA4D02881D75C002AAB4F /* RectangleView.swift */,
+				053CA4EE2882DC0E002AAB4F /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,12 +227,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053CA4EF2882DC0E002AAB4F /* TestView.swift in Sources */,
 				058A29B5287DCB3A00BB5C60 /* HomeView.swift in Sources */,
 				058A29CE287EEC1A00BB5C60 /* HomeViewLearingCard.swift in Sources */,
 				058A29D0287F1AA600BB5C60 /* ContentView.swift in Sources */,
 				05BC0739287FBE9F001C3C00 /* ContentDetailView.swift in Sources */,
+				053CA4D12881D75C002AAB4F /* RectangleView.swift in Sources */,
 				05BC0737287F2BDB001C3C00 /* ContentViewLessonCard.swift in Sources */,
 				058A29B3287DCB3A00BB5C60 /* LearningApp.swift in Sources */,
+				05BC075D28816ED4001C3C00 /* CodeTextView.swift in Sources */,
 				05BC073E287FC3B0001C3C00 /* Constains.swift in Sources */,
 				058A29C6287DCE7B00BB5C60 /* ContentModel.swift in Sources */,
 				058A29CC287EBEF800BB5C60 /* Models.swift in Sources */,

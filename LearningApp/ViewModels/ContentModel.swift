@@ -20,6 +20,12 @@ class ContentModel : ObservableObject {
     @Published var currentLesson: Lesson?
     var currentIndexLesson = 0
     
+    //Current lesson explaination
+    @Published var lessonDescription = NSAttributedString()
+    var styleData: Data?
+    
+    //Current content and test selected
+    @Published var currentContentSelected :Int?
     
     init(){
         getLocalData()
@@ -56,6 +62,20 @@ class ContentModel : ObservableObject {
                 print("decode data error")
             }
             
+            //Parse data style
+            let styleUrl = Bundle.main.url(forResource: "style", withExtension: "html")
+            
+            
+            do{
+                //Read data url to data object
+                let styleData = try Data(contentsOf: styleUrl!)
+                self.styleData = styleData
+                
+            }catch{
+                print("Cannot parse style data")
+            }
+           
+            
         }catch{
             print("data object error")
         }
@@ -87,7 +107,10 @@ class ContentModel : ObservableObject {
             currentIndexLesson = 0
         }
         
+        
+        //Set current lesson
         currentLesson = currentModule!.content.lessons[currentIndexLesson]
+        lessonDescription = addStyling(currentLesson!.explanation) 
     }
     
     func nextLesson(){
@@ -97,6 +120,8 @@ class ContentModel : ObservableObject {
         if(currentIndexLesson < currentModule!.content.lessons.count){
             //Set current lesson property
             currentLesson = currentModule!.content.lessons[currentIndexLesson]
+            lessonDescription = addStyling(currentLesson!.explanation)
+
         }else{
             currentIndexLesson = 0
             currentLesson = nil
@@ -106,4 +131,32 @@ class ContentModel : ObservableObject {
     func hasNextLesson() -> Bool{
         return (currentIndexLesson+1 < currentModule!.content.lessons.count)
     }
+    
+    //MARK: CODE STYLING
+    private func addStyling(_ htmlString: String) -> NSAttributedString{
+        var resultString = NSAttributedString()
+        var data = Data()
+        
+        //Add styling data
+        if(styleData != nil){
+            data.append(self.styleData!)
+
+        }
+        
+        //Add the html data
+        data.append(Data(htmlString.utf8))
+        
+        //Convert to attributed string
+        
+        if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
+            resultString = attributedString
+        }
+        
+            
+       
+        
+        return resultString
+        
+    }
+    
 }

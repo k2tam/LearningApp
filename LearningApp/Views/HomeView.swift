@@ -20,15 +20,19 @@ struct HomeView: View {
                     LazyVStack(){
                         ForEach(model.modules){module in
                             
-                            NavigationLink {
-                                ContentView()
-                                    .onAppear {
-                                        model.beginModule(module.id)
-                                    }
-                            } label: {
-                                //Learning card
-                                HomeViewLearingCard(image: module.content.image, title: module.category, description: module.content.description, volume: "\(module.content.lessons.count) Lessons", time: module.content.time)
-                            }
+                            NavigationLink(
+                                destination:
+                                    ContentView()
+                                        .onAppear {
+                                            model.beginModule(module.id)
+                                        },
+                                tag:module.id,
+                                selection:$model.currentContentSelected,
+                            
+                                label: {
+                                    //Learning card
+                                    HomeViewLearingCard(image: module.content.image, title: module.category, description: module.content.description, volume: "\(module.content.lessons.count) Lessons", time: module.content.time)
+                                })
 
                             
                             //Test card
