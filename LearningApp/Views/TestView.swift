@@ -15,6 +15,22 @@ struct TestView: View {
     
     @State var numCorrect = 0
     
+    var buttonText: String{
+        //Check if answer has been submited
+        if(submited == true){
+            if model.currentIndexQuestion + 1 == model.currentModule!.test.questions.count{
+                return "Finish"
+            }
+            else{
+                return "Next" // or finish
+
+            }
+        }
+        else{
+            return "Submit"
+        }
+    }
+    
     var body: some View {
         NavigationView{
             if model.currentQuestion != nil{
@@ -59,9 +75,7 @@ struct TestView: View {
                                                 RectangleView(color: Color.white)
                                                     .frame(height: 48)
                                             }
-                                            
-                                                
-                                                
+                
                                         }
                                        
                                         Text(model.currentQuestion!.answers[index])
@@ -79,16 +93,30 @@ struct TestView: View {
                     
                     //Button
                     Button {
-                        submited = true
-                        if selectedAnswerIndex == model.currentQuestion!.correctIndex{
-                            numCorrect += 1
+                        //Check if answer has been submited
+                        if(submited == true){
+                            //Answer has been already submited, move to next lesson
+                            model.nextQuestion()
+                            
+                            //Reset properties
+                            submited = false
+                            selectedAnswerIndex = nil
+                        }else{
+                            //Submit the answer
+                            
+                            submited = true
+                            
+                            if selectedAnswerIndex == model.currentQuestion!.correctIndex{
+                                numCorrect += 1
+                            }
                         }
+                        
                     } label: {
                         ZStack{
                             RectangleView(color: Color.green)
                                 .frame(height: 48)
                             
-                            Text("Submit")
+                            Text(buttonText)
                                 .bold()
                                 .foregroundColor(Color.white)
                                 
