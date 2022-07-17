@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ContentModel : ObservableObject {
     
@@ -20,12 +21,17 @@ class ContentModel : ObservableObject {
     @Published var currentLesson: Lesson?
     var currentIndexLesson = 0
     
+    //Current question
+    @Published var currentQuestion: Question?
+    var currentIndexQuestion = 0
+    
     //Current lesson explaination
-    @Published var lessonDescription = NSAttributedString()
+    @Published var codeText = NSAttributedString()
     var styleData: Data?
     
     //Current content and test selected
     @Published var currentContentSelected :Int?
+    @Published var currentTestSelected :Int?
     
     init(){
         getLocalData()
@@ -110,7 +116,7 @@ class ContentModel : ObservableObject {
         
         //Set current lesson
         currentLesson = currentModule!.content.lessons[currentIndexLesson]
-        lessonDescription = addStyling(currentLesson!.explanation) 
+        codeText = addStyling(currentLesson!.explanation) 
     }
     
     func nextLesson(){
@@ -120,7 +126,7 @@ class ContentModel : ObservableObject {
         if(currentIndexLesson < currentModule!.content.lessons.count){
             //Set current lesson property
             currentLesson = currentModule!.content.lessons[currentIndexLesson]
-            lessonDescription = addStyling(currentLesson!.explanation)
+            codeText = addStyling(currentLesson!.explanation)
 
         }else{
             currentIndexLesson = 0
@@ -130,6 +136,28 @@ class ContentModel : ObservableObject {
     
     func hasNextLesson() -> Bool{
         return (currentIndexLesson+1 < currentModule!.content.lessons.count)
+    }
+    
+    func beginTest(_ moduleId:Int){
+        
+        //Set current module
+        beginModule(moduleId)
+        
+        
+        //Set current question index
+        currentIndexQuestion = 0
+        
+        //if there are questions, set the current question to the first one
+        if currentModule?.test.questions.count ?? 0 > 0{
+            currentQuestion = currentModule!.test.questions[currentIndexQuestion]
+            
+            //Set the question content
+            codeText = addStyling(currentQuestion!.content)
+        }
+        
+        
+        
+        
     }
     
     //MARK: CODE STYLING

@@ -33,11 +33,20 @@ struct HomeView: View {
                                     //Learning card
                                     HomeViewLearingCard(image: module.content.image, title: module.category, description: module.content.description, volume: "\(module.content.lessons.count) Lessons", time: module.content.time)
                                 })
-
                             
-                            //Test card
-                            HomeViewLearingCard(image: module.test.image, title: "\(module.category) Test", description: module.test.description, volume: "\(module.test.questions.count) Questions", time: module.test.time)
                             
+                            NavigationLink(
+                                destination:
+                                    TestView()
+                                        .onAppear(perform: {
+                                            model.beginTest(module.id)
+                                        }),
+                                tag: module.id,
+                                selection: $model.currentTestSelected,
+                                label: {
+                                    //Test card
+                                    HomeViewLearingCard(image: module.test.image, title: "\(module.category) Test", description: module.test.description, volume: "\(module.test.questions.count) Questions", time: module.test.time)
+                                })
                         }
                        
                         
