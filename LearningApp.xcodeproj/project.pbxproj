@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		053CA4D12881D75C002AAB4F /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CA4D02881D75C002AAB4F /* RectangleView.swift */; };
 		053CA4EF2882DC0E002AAB4F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CA4EE2882DC0E002AAB4F /* TestView.swift */; };
+		053CA4F128840886002AAB4F /* TestResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053CA4F028840886002AAB4F /* TestResultView.swift */; };
 		058A29B3287DCB3A00BB5C60 /* LearningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29B2287DCB3A00BB5C60 /* LearningApp.swift */; };
 		058A29B5287DCB3A00BB5C60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058A29B4287DCB3A00BB5C60 /* HomeView.swift */; };
 		058A29B7287DCB3B00BB5C60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058A29B6287DCB3B00BB5C60 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		053CA4D02881D75C002AAB4F /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 		053CA4EE2882DC0E002AAB4F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		053CA4F028840886002AAB4F /* TestResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultView.swift; sourceTree = "<group>"; };
 		058A29AF287DCB3A00BB5C60 /* LearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		058A29B2287DCB3A00BB5C60 /* LearningApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningApp.swift; sourceTree = "<group>"; };
 		058A29B4287DCB3A00BB5C60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				05BC075C28816ED4001C3C00 /* CodeTextView.swift */,
 				053CA4D02881D75C002AAB4F /* RectangleView.swift */,
 				053CA4EE2882DC0E002AAB4F /* TestView.swift */,
+				053CA4F028840886002AAB4F /* TestResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				053CA4EF2882DC0E002AAB4F /* TestView.swift in Sources */,
+				053CA4F128840886002AAB4F /* TestResultView.swift in Sources */,
 				058A29B5287DCB3A00BB5C60 /* HomeView.swift in Sources */,
 				058A29CE287EEC1A00BB5C60 /* HomeViewLearingCard.swift in Sources */,
 				058A29D0287F1AA600BB5C60 /* ContentView.swift in Sources */,
